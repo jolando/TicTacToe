@@ -1,12 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicTacToe</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TicTacToe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    
+  <div class="container">
+    <div class="sec-container">
+      <div id="overlay" class="overlay">
+        <span>GAME OVER</span>
+        <button onclick="restart()">Neustart</button>
+      </div>
+      <div class="header">
+        <span class="title">TicTacToe</span>
+      </div>
+      <div class="container-content">
+        <div class="player-panel">
+          <div id="player-1" class="">o Player 1</div>
+          <div id="player-2" class="player-inactive"><b>x</b> Player 2</div>
+        </div>
+        <table>
+          <tr id="row-0" class="">
+            <td id="field-0" onclick="fillShape(0)">
+              <div>
+                <span id="cross-0" class="shape-1 d-none">×</span>
+                <span id="circle-0" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+            <td id="field-1" onclick="fillShape(1)">
+              <div>
+                <span id="cross-1" class="shape-1 d-none">×</span>
+                <span id="circle-1" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+            <td id="field-2" onclick="fillShape(2)">
+              <div>
+                <span id="cross-2" class="shape-1 d-none">×</span>
+                <span id="circle-2" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+          </tr>
+          <tr id="row-1" class="">
+            <td id="field-3" onclick="fillShape(3)">
+              <div>
+                <span id="cross-3" class="shape-1 d-none">×</span>
+                <span id="circle-3" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+            <td id="field-4" onclick="fillShape(4)">
+              <div>
+                <span id="cross-4" class="shape-1 d-none">×</span>
+                <span id="circle-4" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+            <td id="field-5" onclick="fillShape(5)">
+              <div>
+                <span id="cross-5" class="shape-1 d-none">×</span>
+                <span id="circle-5" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+          </tr>
+          <tr id="row-2" class="">
+            <td id="field-6" onclick="fillShape(6)">
+              <div>
+                <span id="cross-6" class="shape-1 d-none">×</span>
+                <span id="circle-6" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+            <td id="field-7" onclick="fillShape(7)">
+              <div>
+                <span id="cross-7" class="shape-1 d-none">×</span>
+                <span id="circle-7" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+            <td id="field-8" onclick="fillShape(8)">
+              <div>
+                <span id="cross-8" class="shape-1 d-none">×</span>
+                <span id="circle-8" class="shape-2 d-none">O</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  font-family: "Geo", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.sec-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-height: 800px;
+  width: 100%;
+  margin: 0 2em;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.349);
+  border-radius: px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 4px 16px 8px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 1px 4px 16px 8px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 1px 4px 16px 8px rgba(0, 0, 0, 0.37);
+}
+
+.container-content {
+  margin: auto;
+  position: relative;
+}
+
+.header {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: brown;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: azure;
+  font-size: 88px;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.player-panel {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+}
+
+.player-panel div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 16px;
+  font-size: 40px;
+}
+
+.player-inactive {
+  opacity: 0.5;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+  border-collapse: collapse;
+  font-family: "Goldman", cursive;
+}
+
+td {
+  width: 133px;
+  height: 133px;
+  cursor: pointer;
+}
+
+td:hover {
+  background-color: rgba(255, 255, 255, 0.123);
+}
+
+table td {
+  border: 3px solid rgba(218, 51, 51, 0.37);
+  background-color: rgba(87, 87, 92, 0.363);
+  border-radius: 10px;
+}
+
+table tr:first-child td {
+  border-top: 0;
+}
+
+table tr td:first-child {
+  border-left: 0;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table tr td:last-child {
+  border-right: 0;
+}
+
+.o-img {
+  display: absolute;
+}
+
+.x-img {
+  display: absolute;
+}
+
+.d-none {
+  display: none;
+}
+
+.shape-1 {
+  display: none;
+  justify-content: center;
+  font-size: 70px;
+  position: relative;
+  max-width: 220px;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  max-height: 400px;
+  color: rgba(255, 255, 255, 0.514);
+}
+
+.shape-2 {
+  display: none;
+  justify-content: center;
+  font-size: 70px;
+  position: relative;
+  max-width: 220px;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  max-height: 400px;
+  color: rgba(2, 2, 2, 0.651);
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(20deg, black, white);
+  z-index: 1;
+  font-size: 140px;
+  text-align: center;
+  animation: fadeIn 225ms ease-in-out;
+}
+
+.show-win-fields {
+  color: tomato;
+  background-color: rgba(0, 128, 128, 0.479);
+}
+
+.overlay button {
+  padding: 10px 100px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(87, 189, 92);
+  color: white;
+}
+
+.horizontal-line {
+  position: absolute;
+  top: 450px;
+  height: 10px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.356);
+  transform: scaleX(0);
+  /* transform: scaleY(0.0); */
+  transition: transform 225ms ease-in-out;
+}
+
+.vertical-line {
+  transform: rotate(90deg) scaleX(1);
+}
+
+@media screen and (max-width: 800px) {
+  .sec-container {
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+  .header {
+    height: 50px;
+    border-radius: 0;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .player-panel {
+    flex-direction: column;
+  }
+  td {
+    height: 120px;
+  }
+  .overlay {
+    font-size: 80px;
+  }
+  .overlay button {
+    padding: 10px 50px;
+  }
+  #player-1 {
+    margin: 0;
+  }
+  #player-2 {
+    margin: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
