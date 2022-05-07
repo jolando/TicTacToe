@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: "Geo", sans-serif;
+  font-family: 'Geo', sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -8,6 +9,8 @@ body {
   align-items: center;
   justify-content: center;
   background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  object-fit: contain;
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -20,10 +23,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  max-height: 800px;
-  width: 100%;
+  max-height: 80%;
+  width: 60%;
   margin: 0 2em;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   background-color: rgba(0, 0, 0, 0.349);
   border-radius: px solid black;
   border-radius: 10px;
@@ -33,12 +36,15 @@ body {
 }
 
 .container-content {
-  margin: auto;
-  position: relative;
+  /* margin: auto;
+  position: relative; */
+  height: 100%;
+  max-height: 30em;
 }
 
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
   height: 100px;
   width: 100%;
   border-top-left-radius: 10px;
@@ -78,9 +84,9 @@ body {
 table {
   display: flex;
   justify-content: center;
-  margin: 2em;
+  margin: 1em;
   border-collapse: collapse;
-  font-family: "Goldman", cursive;
+  font-family: 'Goldman', cursive;
 }
 
 td {
@@ -170,37 +176,46 @@ table tr td:last-child {
 }
 
 .show-win-fields {
-  color: tomato;
   background-color: rgba(0, 128, 128, 0.479);
+}
+
+.player-idendify-1 {
+  margin-right: 20px;
+  font-size: larger;
+  color: black;
+}
+
+.player-idendify-2 {
+  margin-right: 20px;
+  font-size: larger;
+}
+.winner-display {
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+.winner-is {
+  color: rgba(197, 18, 18, 0.904);
+  text-decoration: underline;
+  margin-left: 0px;
+  letter-spacing: 4px;
+
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .overlay button {
   padding: 10px 100px;
   font-weight: bold;
   font-size: 20px;
-  background-color: rgb(87, 189, 92);
+  background-color: rgb(38, 108, 189);
   color: white;
-}
-
-.horizontal-line {
-  position: absolute;
-  top: 450px;
-  height: 10px;
-  width: 400px;
-  background-color: rgba(0, 0, 0, 0.356);
-  transform: scaleX(0);
-  /* transform: scaleY(0.0); */
-  transition: transform 225ms ease-in-out;
-}
-
-.vertical-line {
-  transform: rotate(90deg) scaleX(1);
+  font-family: 'Goldman', cursive;
 }
 
 @media screen and (max-width: 800px) {
   .sec-container {
-    height: 100vh;
-    max-height: 100vh;
+    height: 100vh !important;
+    width: 100vw;
+    max-height: 100vh !important;
     margin: 0;
     border-radius: 0;
   }

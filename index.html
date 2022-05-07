@@ -22,15 +22,16 @@
     <div class="sec-container">
       <div id="overlay" class="overlay">
         <span>GAME OVER</span>
-        <button onclick="restart()">Neustart</button>
+        <span class="winner-display" id="whowon"></span>
+        <button class="reset-button" onclick="restart()">PLAY AGAIN</button>
       </div>
       <div class="header">
         <span class="title">TicTacToe</span>
       </div>
       <div class="container-content">
         <div class="player-panel">
-          <div id="player-1" class="">o Player 1</div>
-          <div id="player-2" class="player-inactive"><b>x</b> Player 2</div>
+          <div id="player-1" class=""><b class="player-idendify-1">o</b> Player 1</div>
+          <div id="player-2" class="player-inactive"><b class="player-idendify-2">x</b> Player 2</div>
         </div>
         <table>
           <tr id="row-0" class="">
